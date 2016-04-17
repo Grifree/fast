@@ -1,0 +1,23 @@
+@import "../../c/_extend"
+@import "../../m/code/index"
+
+.main  {
+    border:1px solid gray;
+    margin-bottom: 10px;
+    @extend %CENTERBOX;
+    @extend %CLEAR;
+}
+.main-sidebar {
+    float: left;
+}
+.main-cnt {
+    float: right;
+}
+
+.main--on {
+    border:1px solid pink;
+}
+
+.m-code {
+    @extend %CENTERBOX;
+}
