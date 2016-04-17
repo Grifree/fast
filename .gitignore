@@ -1,0 +1,4 @@
+node_modules
+*.pick.js
+npm-debug.log
+output/
