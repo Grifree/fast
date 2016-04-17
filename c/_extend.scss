@@ -1,3 +1,8 @@
+// 工具代码片段 (使用方法参考 /view/demo/index.scss)
+// 此文件命名必须大写，表示这些是 『常量』，轻易不要修改。
+// 若万不得已要修改，应当与所有前端开发人员讨论，并在修改后做全方面测试
+// 此文件的用途是替代 .clearifx 等工具类，在 html 中增加 .clearifx 会增加代码维护难度
+
 %CLEAR:after {
     visibility:hidden;
     display:block;
