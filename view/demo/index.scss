@@ -1,11 +1,14 @@
 @import "../../c/_extend"
 @import "../../m/code/index"
-
+// m/ 文件夹下的 css 均已 .m- 为前缀
+// view/ 文件夹下的 css 随意
+// 但也需要遵循 css 规范， 例如 main--on 定义 main 状态为 on 时的样式
 .main  {
     border:1px solid gray;
     margin-bottom: 10px;
     @extend %CENTERBOX;
     @extend %CLEAR;
+    // 善于利用 c/extend.scss 中的代码片段提高开发效率
 }
 .main-sidebar {
     float: left;
@@ -17,7 +20,8 @@
 .main--on {
     border:1px solid pink;
 }
-
+// view/ 中的可以修改 .m- 组件的样式
 .m-code {
+    box-shadow:1px 1px 5px rgba(1,1,1,.2);
     @extend %CENTERBOX;
 }
