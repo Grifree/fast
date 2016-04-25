@@ -1,4 +1,4 @@
-@import "../../c/_extend"
+@import "../../c/_util"
 @import "../../m/code/index"
 // m/ 文件夹下的 css 均已 .m- 为前缀
 // view/ 文件夹下的 css 随意
@@ -8,7 +8,7 @@
     margin-bottom: 10px;
     @extend %CENTERBOX;
     @extend %CLEAR;
-    // 善于利用 c/_extend.scss 中的代码片段提高开发效率
+    // 善于利用 c/_util.scss 中的代码片段提高开发效率
 }
 .main-sidebar {
     float: left;
