@@ -12,7 +12,7 @@ module.exports = {
     entry: _entry,
     output: {
         path: './',
-        filename: "[name].pick.js"
+        filename: "[name].pack.js"
     },
     devtool: 'source-map',
     externals: {
