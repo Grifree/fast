@@ -1,7 +1,5 @@
 var webpack = require('webpack')
-var _entry = {
-
-}
+var _entry = {}
 var addEntry = function addEntry (path) {
     _entry[path] = './' + path + '.js'
 }
@@ -17,9 +15,7 @@ module.exports = {
     devtool: 'source-map',
     externals: {
         // var $ = require('jquery') 等于 var $ = window.jQuery
-        'jquery': 'jQuery',
-        // var _ = require('lodash') 等于 var _ = window._
-        'lodash': '_'
+        'jquery': 'jQuery'
     },
     module: {
         loaders: [
