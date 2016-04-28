@@ -1,5 +1,5 @@
 node_modules
-*.pick.js
-*.pick.js.map
+*.pack.js
+*.pack.js.map
 npm-debug.log
 output/
