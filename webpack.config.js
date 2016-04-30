@@ -4,6 +4,7 @@ var addEntry = function addEntry (path) {
     _entry[path] = './' + path + '.js'
 }
 
+addEntry('view/common/common')
 addEntry('view/demo/index')
 
 module.exports = {
