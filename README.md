@@ -28,15 +28,11 @@ http://127.0.0.1:9080/view/demo/index.html
 ## 目录说明
 
 ```
-- c (common)            # 公用代码
+- base                  # HTML标签样式标准化、SASS工具库、底层JS库
 - m (module)            # 模块代码
 - view                  # 页面业务逻辑代码
+- view/commmon          # 业务逻辑公用代码
 - fis-conf.js           # fis3 配置
 - webpack.config.js     # webpack 配置
 - mobe.js               # mobe 配置
 ```
-
-
-### TODO
-
-- [ ] 给现有代码全部加上注释说明（解释规范）
