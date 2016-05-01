@@ -1,5 +1,7 @@
 var $ = require('jquery')
-$.ajaxSetup({
-    // 设置 $.ajax(settings) settings.timeout 默认 20000
-    timeout: 20000
-});
+$(function () {
+    // commonjs 中的选择器只允许以 #common  .common- 最为前缀
+    $('#commonDemo').on('click', function () {
+        $(this).toggleClass('m-demo--night')
+    })
+})
