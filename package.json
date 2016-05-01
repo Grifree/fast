@@ -4,7 +4,7 @@
     "webpack-build": "webpack",
     "fis": "fis3 release -wL -d ./output",
     "fis-build": "fis3 -d ./output",
-    "mobe": "static-server"
+    "mobe": "cd output && static-server"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
