@@ -1,0 +1,29 @@
+@import "../../base/_util";
+.main {
+    padding-top: 10px;
+    @extend %CENTERBOX;
+}
+.tag {
+    display:inline-block;
+    padding-left: .3em;
+    padding-right: .3em;
+    background-color:#EEE;
+    border-radius: 3px;
+}
+.tag-item {
+
+}
+.tag-item-text {
+
+}
+.tag-item-remove {
+    color:red;
+    cursor: pointer;
+}
+
+html .tag--disable {
+    opacity: .6;
+    .tag-item-remove {
+        display: none;
+    }
+}
