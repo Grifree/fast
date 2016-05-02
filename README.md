@@ -1,9 +1,9 @@
 # nice
 
-> Web Solution
+> The front-end integration solutions
+> 前端集成解决方案
 
 ## 下载与安装
-
 
 ```shell
 git clone https://github.com/nimojs/webs/archive/master.zip
