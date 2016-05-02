@@ -22,7 +22,6 @@
     "url-loader": "^0.5.7"
   },
   "dependencies": {
-    "jquery": "^1.12.3",
-    "lodash": "^3.10.1"
+    "jquery": "^1.12.3"
   }
 }
