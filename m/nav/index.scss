@@ -1,9 +1,20 @@
+@import "../../base/_icon";
+@import "../../base/_util";
 .m-nav {
-    border-bottom:1px solid #EEE;
+    @extend %CENTERBOX;
+    @extend %icon;
+    @extend %icon-info;
+    &:before {
+        color:#ABCDEF;
+    }
+    margin-top:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:3px;
+    font-size:40px;
     cursor: pointer;
 }
 .m-nav-item {
-    font-size:40px;
     color:#ABCDEF;
     text-decoration: none;
 }
