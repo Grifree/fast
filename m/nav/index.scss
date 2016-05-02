@@ -1,0 +1,19 @@
+.m-nav {
+    border-bottom:1px solid #EEE;
+    cursor: pointer;
+}
+.m-nav-item {
+    font-size:40px;
+    color:#ABCDEF;
+    text-decoration: none;
+}
+
+html .m-nav--night {
+    background-color:#444;
+    .m-nav-item {
+        color: white;
+    }
+}
+html .m-nav-item--on {
+    text-decoration: underline;
+}
