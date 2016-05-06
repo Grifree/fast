@@ -5,8 +5,18 @@
 ### 模块 `/m/`
 
 ````html
-<!-- 基础样式 -->
+<h2>基础</h2>
 <div class="m-box">
+    <div class="m-box-hd">
+        <span class="m-box-hd-title">title</span>
+    </div>
+    <div class="m-box-bd">
+        text
+    </div>
+</div>
+
+<h2>高亮</h2>
+<div class="m-box m-box--on">
     <div class="m-box-hd">
         <span class="m-box-hd-title">title</span>
     </div>
@@ -34,4 +44,13 @@
     font-size: 12px;
     background-color: white;
 }
+/* .m-{模块名}--{状态} */
+html .m-box--on {
+    border-color:orange;
+    background-color: #FFF1D9;
+}
+html .m-box--on .m-box-hd {
+    border-bottom-color: orange;
+}
+/* 选择器前加 html 是为了提高状态的CSS权重 */
 ````
