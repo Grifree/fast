@@ -1,4 +1,6 @@
 @import "../../base/_util";
+@import "../../m/icon/index";
+
 .main {
     padding-top: 10px;
     @extend %CENTERBOX;
@@ -19,6 +21,7 @@
 .tag-item-remove {
     color:red;
     cursor: pointer;
+    @extend %icon-remove;
 }
 
 html .tag--disable {
