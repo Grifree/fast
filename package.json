@@ -4,7 +4,7 @@
     "webpack-build": "webpack",
     "fis": "fis3 release -wL -d ./output",
     "fis-build": "fis3 -d ./output",
-    "mobe": "cd output && static-server"
+    "mobe": "nodemon -w mobe.js mobe.js"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
@@ -15,6 +15,7 @@
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
     "fis-parser-node-sass": "github:nimojs/fis-parser-node-sass#0.1.9",
+    "fms": "^0.0.32",
     "markrun": "^0.0.1",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.2.0",
