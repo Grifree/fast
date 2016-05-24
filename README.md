@@ -10,8 +10,9 @@ git clone https://github.com/nimojs/webs/archive/master.zip
 cd webs
 npm i fis3 -g
 npm i webpack -g
-npm i static-server -g
+npm i nodemon -g
 npm install
+## 建议使用 cnpm 按照模块
 ```
 
 ## 启动
