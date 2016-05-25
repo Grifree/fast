@@ -34,7 +34,7 @@ fis.match('*.md', {
             <title> <%- title %> </title>
             </head>
             <body>
-            <script src="/b/library.js"></script>
+            <script src="/base/library.js"></script>
             <script src="/view/common/common.pack.js"></script>
             <%- content %>
         </body>
