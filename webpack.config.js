@@ -6,6 +6,9 @@ var addEntry = function addEntry (path) {
 addEntry('view/common/common')
 addEntry('view/demo/index')
 
+// require 用于配合 README.md 中的文档
+addEntry('m/load/require')
+
 module.exports = {
     entry: _entry,
     output: {
@@ -44,7 +47,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif)$/,
                 // 小于 8k 的图片将以 base64 的方式嵌入在 css 中
-                loader: 'url?limit=8192'
+                loader: 'url?limit=8192&name=[path][name].[ext]'
             },
             // 不内嵌字体文件
             {
