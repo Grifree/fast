@@ -39,3 +39,24 @@ http://127.0.0.1:9080/view/demo/index.html
 - webpack.config.js     # webpack 配置
 - mobe.js               # mobe 配置
 ```
+
+
+## rem
+
+如果你要使用 rem 方案请确保 `commmon/head1.html` 中的 `<head>` 部分引入了 `vendor/rem_layout/rem.js`
+
+`/base/_rem.scss` 中默认设置了设计稿 640，可根据实际情况调整这个值。
+
+### 使用计算方法
+
+```scss
+// view/demo/index.scss
+@import "../../base/_rem";
+
+.mobile {
+    width:rem(450);
+}
+.mobile-title {
+    width: rem(300);
+}
+```
