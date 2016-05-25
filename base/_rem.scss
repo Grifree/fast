@@ -1,3 +1,4 @@
 @function rem($size){
-    @return ($size/32) + rem;
+    // 640 是设计稿宽度
+    @return ($size/640/320*16) + rem;
 }
