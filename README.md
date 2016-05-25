@@ -44,6 +44,12 @@ http://127.0.0.1:9080/view/demo/index.html
 
 每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `webpack.config.js` 中添加入口
 
+每次修改入口后，需要重启 `npm run webpack`
+
+### m/[name]/require.js
+
+require.js 是为了配合 README.md 引入模块
+
 ## rem
 
 如果你要使用 rem 方案请确保 `commmon/head1.html` 中的 `<head>` 部分引入了 `vendor/rem_layout/rem.js`
