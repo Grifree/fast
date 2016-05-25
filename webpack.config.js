@@ -8,6 +8,7 @@ addEntry('view/demo/index')
 
 // require 用于配合 README.md 中的文档
 addEntry('m/load/require')
+addEntry('m/app/require')
 
 module.exports = {
     entry: _entry,
