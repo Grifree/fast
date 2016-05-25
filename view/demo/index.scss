@@ -21,7 +21,7 @@
 .tag-item-remove {
     color:red;
     cursor: pointer;
-    @extend %icon-remove;
+    @extend %icon-error;
 }
 
 html .tag--disable {
