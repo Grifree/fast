@@ -1,8 +1,7 @@
-@import "../../base/_icon";
+@import "../icon/index";
 @import "../../base/_util";
 .m-nav {
     @extend %CENTERBOX;
-    @extend %icon;
     @extend %icon-info;
     &:before {
         color:#ABCDEF;
