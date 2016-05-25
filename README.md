@@ -40,6 +40,9 @@ http://127.0.0.1:9080/view/demo/index.html
 - mobe.js               # mobe 配置
 ```
 
+## 入口
+
+每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `webpack.config.js` 中添加入口
 
 ## rem
 
