@@ -8,9 +8,9 @@ fis.match('*.md', {
     rExt: '.html',
     parser: function (content) {
         var html = markrun(content, {
-            type: {
+            lang: {
                 js: function (source) {
-                    var result = babel.transform(source, {
+                    var result = require('babel-core').transform(source, {
                         presets: [
                              require('babel-preset-es2015'),
                              require('babel-preset-react')
