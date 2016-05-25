@@ -31,7 +31,7 @@ fis.match('*.md', {
             <meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
             <link rel="stylesheet" href="/base/normalize.scss">
             <link rel="stylesheet" href="/view/common/common.scss">
-            <title><%- title %></titile>
+            <title> <%- title %> </title>
             </head>
             <body>
             <script src="/b/library.js"></script>
@@ -39,8 +39,8 @@ fis.match('*.md', {
             <%- content %>
         </body>
         </html>`
-        }
-        html = html.replace(/href="([^"])\.md"/, 'href="$1.html"')
+        })
+        html = html.replace(/href="([^"]+)\.md"/g, 'href="$1.html"')
         return html
     }
 })
