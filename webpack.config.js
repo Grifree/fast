@@ -18,10 +18,10 @@ module.exports = {
     devtool: 'source-map',
     externals: {
         // var $ = require('jquery') 等于 var $ = window.jQuery
-        'jquery': 'jQuery',
-        'react': 'React',
-        'react-dom': 'ReactDOM',
-        'classnames': 'classNames'
+        'jquery': '__YOU_NEED_REQUIRE_USE_MODULE.jQuery',
+        'react': '__YOU_NEED_REQUIRE_USE_MODULE.React',
+        'react-dom': '__YOU_NEED_REQUIRE_USE_MODULE.ReactDOM',
+        'classnames': '__YOU_NEED_REQUIRE_USE_MODULE.classNames'
     },
     module: {
         loaders: [
