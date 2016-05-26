@@ -1,4 +1,3 @@
-var loading = require('./index')
 window.require = function (path) {
     var output
     switch (path) {
