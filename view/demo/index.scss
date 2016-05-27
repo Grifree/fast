@@ -23,6 +23,9 @@
     color:red;
     cursor: pointer;
     @extend %icon-error;
+    &:before {
+        font-size:1.2em;
+    }
 }
 
 html .tag--disable {
