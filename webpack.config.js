@@ -25,6 +25,12 @@ module.exports = {
         'classnames': '__YOU_NEED_REQUIRE_USE_MODULE.classNames'
     },
     module: {
+        postLoaders: [
+            {
+                test: /\.js$/,
+                loaders: ['es3ify']
+            }
+        ],
         loaders: [
             {
                 test: /\.js$/,
