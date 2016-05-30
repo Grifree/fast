@@ -26,6 +26,7 @@ module.exports = {
     },
     module: {
         postLoaders: [
+            // 如果不需要兼容IE8请去掉 es3ify
             {
                 test: /\.js$/,
                 loaders: ['es3ify']
