@@ -1,7 +1,7 @@
 var markrun = require('markrun')
 fis.match('*.scss', {
     rExt: '.css',
-    parser: fis.plugin('node-sass')
+    parser: fis.plugin('nodesass')
 })
 
 fis.match('*.md', {
