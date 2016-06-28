@@ -57,11 +57,6 @@ module.exports = {
                 test: /\.(png|jpg|gif)$/,
                 // 小于 8k 的图片将以 base64 的方式嵌入在 css 中
                 loader: 'url?limit=8192&name=[path][name].[ext]'
-            },
-            // 不内嵌字体文件
-            {
-                test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
-                loader: 'url?limit=9999999&name=[path][name].[ext]'
             }
         ]
     }
