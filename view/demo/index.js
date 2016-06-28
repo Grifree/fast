@@ -13,6 +13,7 @@ $(function () {
     document.documentElement
     var sty = document.createElement('style');
     sty.type = 'text/css';
+    // IE
     if (sty.styleSheet) {
        sty.styleSheet.cssText = content;
     }
