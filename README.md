@@ -69,3 +69,17 @@ require.js 是为了配合 README.md 引入模块
     width: rem(300);
 }
 ```
+## js 内嵌 css
+
+项目中在 js 内嵌 css 均使用如下方式
+
+```js
+__css('./index.scss')
+```
+
+webpack 的 `require('./a.scss')` 方式只在应用第三方库样式时使用，例如：
+
+```js
+require('rc-select/assets/index.less')
+const Select = require('rc-select')
+```
