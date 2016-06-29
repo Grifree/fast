@@ -1,5 +1,5 @@
 @import "../icon/index";
-@import "../../base/_util";
+@import "../../base/mixins";
 .m-nav {
     @extend %CENTERBOX;
     @extend %icon-info;
