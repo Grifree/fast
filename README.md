@@ -69,15 +69,35 @@ require.js 是为了配合 README.md 引入模块
     width: rem(300);
 }
 ```
-## js 内嵌 css
+## js-inline-style
 
 项目中在 js 内嵌 css 均使用如下方式
 
+> 因为构建工具使用的是 fis ，为了支持文件 hash 。非第三方库的样式均使用 `__css("path")` 引入
+
 ```js
+// index.js
 __css('./index.scss')
 ```
 
-webpack 的 `require('./a.scss')` 方式只在应用第三方库样式时使用，例如：
+最终会被编译成
+
+```js
+;(function (content) {
+  var head = document.getElementsByTagName("head")[0] || document.documentElement;
+  var sty = document.createElement("style");
+  sty.type = "text/css";
+  // IE
+  if (sty.styleSheet) {
+    sty.styleSheet.cssText = content;
+  } else {
+    sty.innerHTML = content;
+  }
+  head.appendChild(sty);
+})("body {font-size:12px;}");
+```
+
+webpack 的 `require('./a.scss')` 方式只在使用第三方库样式时使用，例如：
 
 ```js
 require('rc-select/assets/index.less')
