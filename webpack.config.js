@@ -25,6 +25,12 @@ module.exports = {
         'classnames': '__YOU_NEED_REQUIRE_USE_MODULE.classNames'
     },
     module: {
+        preLoaders: [
+            {
+               test: /\.js$/,
+               loaders: ['fis-inline-style']
+            }
+        ],
         postLoaders: [
             // 如果不需要兼容IE8请去掉 es3ify
             {
