@@ -21,8 +21,7 @@ module.exports = {
         // var $ = require('jquery') 等于 var $ = window.jQuery
         'jquery': '__YOU_NEED_REQUIRE_USE_MODULE.jQuery',
         'react': '__YOU_NEED_REQUIRE_USE_MODULE.React',
-        'react-dom': '__YOU_NEED_REQUIRE_USE_MODULE.ReactDOM',
-        'classnames': '__YOU_NEED_REQUIRE_USE_MODULE.classNames'
+        'react-dom': '__YOU_NEED_REQUIRE_USE_MODULE.ReactDOM'
     },
     module: {
         preLoaders: [
