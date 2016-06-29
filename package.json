@@ -26,6 +26,6 @@
     "url-loader": "^0.5.7"
   },
   "dependencies": {
-    
+    "classnames": "^2.2.5"
   }
 }
