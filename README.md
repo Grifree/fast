@@ -1,4 +1,4 @@
-# nice
+# woke
 
 > The front-end integration solutions
 > 前端集成解决方案
@@ -6,7 +6,7 @@
 ## 下载与安装
 
 ```shell
-git clone https://github.com/nimojs/webs/archive/master.zip
+git clone https://github.com/nimojs/woke/archive/master.zip
 cd webs
 npm i fis3 -g
 npm i webpack -g
