@@ -9,7 +9,6 @@
 git clone https://github.com/nimojs/woke/archive/master.zip
 cd webs
 npm i fis3 -g
-npm i webpack -g
 npm i nodemon -g
 ## 如果你全局安装过 node-sass 就不要装了（因为安装太慢了）
 npm i node-sass -g
@@ -20,12 +19,11 @@ npm install
 ## 启动
 
 ```shell
-# 必须先运行 webpack
-npm run webpack
-npm run fis
+
+npm run woke
 npm run mobe
 ```
-http://127.0.0.1:9080/view/demo/index.html
+http://127.0.0.1:2000/view/demo/index.html
 
 
 ## 目录说明
@@ -42,9 +40,7 @@ http://127.0.0.1:9080/view/demo/index.html
 
 ## 入口
 
-每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `webpack.config.js` 中添加入口
-
-每次修改入口后，需要重启 `npm run webpack`
+每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `fis-conf.js` `webpackEntry` 中添加入口
 
 ### m/[name]/require.js
 
@@ -60,7 +56,7 @@ require.js 是为了配合 README.md 引入模块
 
 ```scss
 // view/demo/index.scss
-@import "../../base/_rem";
+@import "../../base/func";
 
 .mobile {
     width:rem(450);

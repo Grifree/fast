@@ -1,9 +1,6 @@
 {
   "scripts": {
-    "webpack": "webpack --progress --colors --watch",
-    "webpack-build": "webpack",
-    "fis": "fis3 release -wL -d ./output",
-    "fis-build": "fis3 -d ./output",
+    "woke": "fis3 release -wL -d ./output",
     "mobe": "nodemon -w mobe.js mobe.js"
   },
   "devDependencies": {
@@ -19,6 +16,7 @@
     "file-loader": "^0.8.5",
     "fis-inline-style-loader": "^0.2.0",
     "fis-parser-nodesass": "0.2.1",
+    "fis3-parser-webpack": "0.0.5",
     "fms": "^0.0.32",
     "markrun": "^0.0.1",
     "sass-loader": "^3.2.0",
