@@ -9,13 +9,14 @@
 git clone https://github.com/nimojs/woke/archive/master.zip
 cd woke
 ```
+
 ```shell
+# 安装全局
 npm i fis3 -g
 npm i nodemon -g
-## 如果你全局安装过 node-sass 就不要装了（因为安装太慢了）
 npm i node-sass -g
-npm install
-## 建议使用 cnpm 按照模块
+
+npm i
 ```
 
 ## 启动
