@@ -16,7 +16,7 @@
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
     "fis-inline-style-loader": "^0.2.0",
-    "fis-parser-nodesass": "0.2.1",
+    "fis-parser-nodesass": "0.2.3",
     "fis3-parser-webpack": "0.0.5",
     "fms": "^0.0.32",
     "markrun": "^0.0.1",
