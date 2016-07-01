@@ -7,7 +7,9 @@
 
 ```shell
 git clone https://github.com/nimojs/woke/archive/master.zip
-cd webs
+cd woke
+```
+```shell
 npm i fis3 -g
 npm i nodemon -g
 ## 如果你全局安装过 node-sass 就不要装了（因为安装太慢了）
