@@ -13,8 +13,8 @@ var conf = {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
         <script src="/vendor/rem_layout/rem.js"></script>
-        <link rel="stylesheet" href="/base/normalize.scss">
-        <link rel="stylesheet" href="/view/common/common.scss">
+        <link rel="stylesheet" href="/base/normalize.less">
+        <link rel="stylesheet" href="/view/common/common.less">
         <title> <%- title %> </title>
         </head>
         <body>
@@ -28,9 +28,9 @@ var conf = {
 
 
 var markrun = require('markrun')
-fis.match('*.scss', {
+fis.match('*.less', {
     rExt: '.css',
-    parser: fis.plugin('nodesass')
+    parser: fis.plugin('less-2.x')
 })
 
 fis.match('*.md', {
