@@ -19,7 +19,8 @@ app.run({
     port: '2000',
     read: ['/view/demo/'],
     view: {
-        server: 'http://127.0.0.1:2009'
+        server: 'http://127.0.0.1:2009',
+        templateDir: './output/view/'
     }
 })
 
