@@ -11,11 +11,20 @@ cd woke
 ```
 
 ```shell
-# 安装全局
-npm i fis3 -g
-npm i nodemon -g
-npm i node-sass -g
+## 只有 Mac OS 系统需要加 sudo 前缀
+sudo npm i -g npm3
 
+# 使用淘宝 npm 加速所有 npm 模块安装
+alias npm="npm3 --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
+
+# fis3 node-sass 安装速度较慢，请耐心等待
+sudo cnpm i fis3 -g
+sudo cnpm i nodemon -g
+sudo cnpm i node-sass -g
+# 若你已经完成过以上操作，基于 woke 解决方案的项目初始化时需要执行一次 npm i
 npm i
 ```
 
