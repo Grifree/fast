@@ -56,12 +56,12 @@ require.js 是为了配合 README.md 引入模块
 
 如果你要使用 rem 方案请确保 `commmon/head1.html` 中的 `<head>` 部分引入了 `vendor/rem_layout/rem.js`
 
-`/base/_rem.scss` 中默认设置了设计稿 640，可根据实际情况调整这个值。
+`/base/_rem.less` 中默认设置了设计稿 640，可根据实际情况调整这个值。
 
 ### 使用计算方法
 
-```scss
-// view/demo/index.scss
+```less
+// view/demo/index.less
 @import "../../base/func";
 
 .mobile {
@@ -79,7 +79,7 @@ require.js 是为了配合 README.md 引入模块
 
 ```js
 // index.js
-__css('./index.scss')
+__css('./index.less')
 ```
 
 最终会被编译成
@@ -99,7 +99,7 @@ __css('./index.scss')
 })("body {font-size:12px;}");
 ```
 
-webpack 的 `require('./a.scss')` 方式只在使用第三方库样式时使用，例如：
+webpack 的 `require('./a.less')` 方式只在使用第三方库样式时使用，例如：
 
 ```js
 require('rc-select/assets/index.less')
