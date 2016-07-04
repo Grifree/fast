@@ -22,10 +22,9 @@ alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"
 
-# fis3 webpack node-sass nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
+# fis3 webpack nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
 sudo cnpm i fis3 -g
 sudo cnpm i webpack -g
-sudo cnpm i node-sass -g
 sudo cnpm i nodemon -g
 
 # 安装非全局依赖
@@ -44,7 +43,7 @@ http://127.0.0.1:2000/view/demo/index.html
 ## 目录说明
 
 ```
-- base                  # HTML标签样式标准化、SASS工具库、底层JS库
+- base                  # HTML标签样式标准化、less 工具库、底层JS库
 - m (module)            # 模块代码
 - view                  # 页面业务逻辑代码
 - view/commmon          # 业务逻辑公用代码
