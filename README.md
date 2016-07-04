@@ -21,9 +21,9 @@ alias npm="npm3 --registry=https://registry.npm.taobao.org \
 --userconfig=$HOME/.cnpmrc"
 
 # fis3 node-sass 安装速度较慢，请耐心等待
-sudo cnpm i fis3 -g
-sudo cnpm i nodemon -g
-sudo cnpm i node-sass -g
+sudo npm i fis3 -g
+sudo npm i nodemon -g
+sudo npm i node-sass -g
 # 若你已经完成过以上操作，基于 woke 解决方案的项目初始化时需要执行一次 npm i
 npm i
 ```
