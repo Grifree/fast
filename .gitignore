@@ -1,5 +1,3 @@
 node_modules
-*.pack.js
-*.pack.js.map
 npm-debug.log
 output/
