@@ -14,7 +14,7 @@ cd woke
 ### 安装全局包
 ```shell
 # 使用 npm3 
-sudo npm i -g npm3
+sudo npm i npm3  -g  --registry=https://registry.npm.taobao.org
 
 # cnpm 国内加速
 alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
