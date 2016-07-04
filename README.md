@@ -1,5 +1,7 @@
 # woke
 
+- [模块索引](./m/README.md)
+
 > The front-end integration solutions
 > 前端集成解决方案
 
