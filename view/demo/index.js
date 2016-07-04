@@ -7,3 +7,4 @@ $(function () {
         $this.closest('.js-tag').remove()
     })
 })
+__css("./index.less")
