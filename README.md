@@ -9,29 +9,44 @@
 git clone https://github.com/nimojs/woke/archive/master.zip
 cd woke
 ```
-
+### npm3
 ```shell
-## 只有 Mac OS 系统需要加 sudo 前缀
-sudo npm i -g npm3
+# 确保你的 npm 是 3.0 版本
+npm -v
+# 3.10.3
 
+# 安装 npm 3.x.y 版本
+sudo npm i -g npm
+```
+> 如果你还想保留 npm 2.x.y 版本请使用 `sudo npm i -g npm3`
+
+### cnpm 加速
+```shell
 # 使用淘宝 npm 加速所有 npm 模块安装
-alias npm="npm3 --registry=https://registry.npm.taobao.org \
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"
+```
 
+> 若你使用了 `sudo npm i -g npm3`， `alias cnpm="npm` 应改为 `alias cnpm="npm3`
+
+### 安装全局包
+```shell
 # fis3 node-sass 安装速度较慢，请耐心等待
-sudo npm i fis3 -g
-sudo npm i nodemon -g
-sudo npm i node-sass -g
-# 若你已经完成过以上操作，基于 woke 解决方案的项目初始化时需要执行一次 npm i
-npm i
+sudo cnpm i fis3 -g
+sudo cnpm i nodemon -g
+sudo cnpm i node-sass -g
+```
+
+### 安装非全局包
+```shell
+cnpm i
 ```
 
 ## 启动
 
 ```shell
-
 npm run woke
 npm run mobe
 ```
