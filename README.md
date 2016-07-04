@@ -13,7 +13,6 @@ git clone https://github.com/nimojs/woke/archive/master.zip
 cd woke
 ```
 
-### 安装全局包
 ```shell
 # fis3 webpack nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
 sudo npm i fis3 -g
