@@ -8,6 +8,12 @@ var conf = {
         '/view/demo/index.js',
         '/view/index/index.js'
     ],
+    webpackExternals: {
+        // var $ = require('jquery') 等于 var $ = window.jQuery
+        'jquery': 'jQuery',
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
     markrun: {
         template: `<!DOCTYPE html>
     <html lang="en">
@@ -67,8 +73,10 @@ fis.match('*.md', {
         return html
     }
 })
+var webpackConfig = require('./webpack.config.js')
+webpackConfig.externals = conf.webpackExternals
 fis.match('{' + conf.webpackEntry.join(',') + '}', {
     parser: [
-        fis.plugin('webpack', require('./webpack.config.js'))
+        fis.plugin('webpack', webpackConfig)
     ]
 })

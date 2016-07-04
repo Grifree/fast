@@ -1,11 +1,5 @@
 module.exports = {
     devtool: 'source-map',
-    externals: {
-        // var $ = require('jquery') 等于 var $ = window.jQuery
-        'jquery': 'jQuery',
-        'react': 'React',
-        'react-dom': 'ReactDOM'
-    },
     module: {
         preLoaders: [
             {
