@@ -6,7 +6,7 @@
   url('iconfont.svg?t=1464100632#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-%iconfont {
+.iconfont() {
   font-family:"iconfont" !important;
   font-size:1em;
   font-style:normal;
@@ -14,10 +14,10 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-%icon-info:before { content: "\e605"; @extend %iconfont;}
-%icon-wait:before { content: "\e606"; @extend %iconfont;}
-%icon-help:before { content: "\e600"; @extend %iconfont;}
-%icon-error:before { content: "\e601"; @extend %iconfont;}
-%icon-warning:before { content: "\e602"; @extend %iconfont;}
-%icon-success:before { content: "\e603"; @extend %iconfont;}
-%icon-stop:before { content: "\e604"; @extend %iconfont;}
+.icon-info(){&:before { content: "\e605"; .iconfont;}}
+.icon-wait(){&:before{ content: "\e606"; .iconfont();}}
+.icon-help(){&:before{ content: "\e600"; .iconfont();}}
+.icon-error(){&:before{ content: "\e601"; .iconfont();}}
+.icon-warning(){&:before{ content: "\e602"; .iconfont();}}
+.icon-success(){&:before{ content: "\e603"; .iconfont();}}
+.icon-stop(){&:before{ content: "\e604"; .iconfont();}}

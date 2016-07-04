@@ -1,6 +1,6 @@
 ## 加载动画
 
-<script src="./require.pack.js"></script>
+<script src="./r.js"></script>
 
 ````js
 var load = require('./index')

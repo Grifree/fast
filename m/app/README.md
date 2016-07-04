@@ -1,6 +1,6 @@
 # react 模块示例
 
-<script src="./require.pack.js"></script>
+<script src="./r.js"></script>
 
 <div id="demo"></div>
 

@@ -12,11 +12,11 @@
 ## 使用图标
 
 ```scss
-// view/demo/index.scss
+// view/demo/index.less
 @import "../../m/icon/index";
 .tag-item-remove {
     color:red;
     cursor: pointer;
-    @extend %icon-remove;
+    .icon-remove;
 }
 ```

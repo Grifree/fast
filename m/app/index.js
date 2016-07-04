@@ -1,4 +1,4 @@
-import "./index.scss"
+import "./index.less"
 import React from 'react'
 const App = React.createClass({
     render: function () {

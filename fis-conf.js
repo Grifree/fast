@@ -1,5 +1,9 @@
 var conf = {
     webpackEntry: [
+        '/m/app/r.js',
+        '/m/icon/r.js',
+        '/m/load/r.js',
+
         '/view/common/common.js',
         '/view/demo/index.js',
         '/view/index/index.js'
@@ -28,9 +32,15 @@ var conf = {
 
 
 var markrun = require('markrun')
+var LessPluginFunctions = require('less-plugin-functions')
+
 fis.match('*.less', {
     rExt: '.css',
-    parser: fis.plugin('less-2.x')
+    parser: fis.plugin('less-2.x', {
+        plugins: [
+            new LessPluginFunctions()
+        ]
+    })
 })
 
 fis.match('*.md', {

@@ -1,5 +1,5 @@
 var $ = require('jquery')
-require('./index.scss')
+require('./index.less')
 var load = {
     _$dom:false,
     step: function () {
