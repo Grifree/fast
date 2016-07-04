@@ -13,7 +13,7 @@ cd woke
 
 ### 安装全局包
 ```shell
-# 使用 npm3 
+# 使用 npm3
 sudo npm i npm3  -g  --registry=https://registry.npm.taobao.org
 
 # cnpm 国内加速
@@ -22,10 +22,11 @@ alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"
 
-# fis3 node-sass 安装速度较慢，请耐心等待（但只需要在全局安装一次）
+# fis3 webpack node-sass nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
 sudo cnpm i fis3 -g
-sudo cnpm i nodemon -g
+sudo cnpm i webpack -g
 sudo cnpm i node-sass -g
+sudo cnpm i nodemon -g
 
 # 安装非全局依赖
 cnpm i
