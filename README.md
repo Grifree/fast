@@ -6,41 +6,28 @@
 ## 下载与安装
 
 ```shell
+# git clone 或者浏览器打开zip链接
 git clone https://github.com/nimojs/woke/archive/master.zip
 cd woke
 ```
-### npm3
-```shell
-# 确保你的 npm 是 3.0 版本
-npm -v
-# 3.10.3
-
-# 安装 npm 3.x.y 版本
-sudo npm i -g npm
-```
-> 如果你还想保留 npm 2.x.y 版本请使用 `sudo npm i -g npm3`
-
-### cnpm 加速
-```shell
-# 使用淘宝 npm 加速所有 npm 模块安装
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc"
-```
-
-> 若你使用了 `sudo npm i -g npm3`， `alias cnpm="npm` 应改为 `alias cnpm="npm3`
 
 ### 安装全局包
 ```shell
-# fis3 node-sass 安装速度较慢，请耐心等待
+# 使用 npm3 
+sudo npm i -g npm3
+
+# cnpm 国内加速
+alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
+
+# fis3 node-sass 安装速度较慢，请耐心等待（但只需要在全局安装一次）
 sudo cnpm i fis3 -g
 sudo cnpm i nodemon -g
 sudo cnpm i node-sass -g
-```
 
-### 安装非全局包
-```shell
+# 安装非全局依赖
 cnpm i
 ```
 
