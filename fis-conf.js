@@ -4,6 +4,7 @@ var conf = {
         '/m/icon/r.js',
         '/m/load/r.js',
 
+        '/base/library.js',
         '/view/common/common.js',
         '/view/demo/index.js',
         '/view/index/index.js'
@@ -15,24 +16,62 @@ var conf = {
         'react-dom': 'ReactDOM'
     },
     markrun: {
-        template: `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
-        <!--<script src="/vendor/rem_layout/rem.js"></script>-->
-        <link rel="stylesheet" href="/base/normalize.less">
-        <link rel="stylesheet" href="/view/common/common.less">
-        <title> <%- title %> </title>
-        </head>
-        <body>
-        <script src="/base/library.js"></script>
-        <script src="/view/common/common.pack.js"></script>
-        <%- content %>
-    </body>
-    </html>`
+        lang: {
+            js: function (source) {
+                var result = require('babel-core').transform(source, {
+                    presets: [
+                         require('babel-preset-es2015'),
+                         require('babel-preset-react')
+                    ]
+                })
+                return {
+                    type: 'js',
+                    code: result.code
+                }
+            }
+        },
+        template: require('fs').readFileSync(__dirname + "/m/template.ejs", 'utf-8').toString()
+    },
+    webpack: {
+        devtool: 'source-map',
+        module: {
+            preLoaders: [
+                {
+                   test: /\.js$/,
+                   loaders: ['fis-inline-style']
+                }
+            ],
+            postLoaders: [
+                // 如果不需要兼容IE8请去掉 es3ify
+                {
+                    test: /\.js$/,
+                    loaders: ['es3ify']
+                }
+            ],
+            loaders: [
+                {
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015', 'react'],
+                        plugins: ["transform-decorators-legacy","transform-class-properties"]
+                    }
+                },
+                {
+                    test: /\.css$/,
+                    loader: "style!css"
+                },
+                {
+                    test: /\.less$/,
+                    loader: "style!css!less"
+                },
+                {
+                    test: /\.(png|jpg|jpeg|gif)$/,
+                    // 小于 8k 的图片将以 base64 的方式嵌入在 css 中
+                    loader: 'url?limit=8192&name=[path][name].[ext]'
+                }
+            ]
+        }
     }
 }
 
@@ -52,36 +91,14 @@ fis.match('*.less', {
 fis.match('*.md', {
     rExt: '.html',
     parser: function (content) {
-        var html = markrun(content, {
-            lang: {
-                js: function (source) {
-                    var result = require('babel-core').transform(source, {
-                        presets: [
-                             require('babel-preset-es2015'),
-                             require('babel-preset-react')
-                        ]
-                    })
-                    return {
-                        type: 'js',
-                        code: result.code
-                    }
-                }
-            },
-            template: conf.markrun.template
-        })
+        var html = markrun(content, conf.markrun)
         html = html.replace(/href="([^"]+)\.md"/g, 'href="$1.html"')
         return html
     }
 })
-var webpackConfig = require('./webpack.config.js')
-webpackConfig.externals = conf.webpackExternals
+conf.webpack.externals = conf.webpackExternals
 fis.match('{' + conf.webpackEntry.join(',') + '}', {
     parser: [
-        fis.plugin('webpack', webpackConfig)
+        fis.plugin('webpack', conf.webpack)
     ]
 })
-
-
-fis.set('project.ignore', [
-  'base/doc/**'
-]);
