@@ -80,3 +80,8 @@ fis.match('{' + conf.webpackEntry.join(',') + '}', {
         fis.plugin('webpack', webpackConfig)
     ]
 })
+
+
+fis.set('project.ignore', [
+  'base/doc/**'
+]);
