@@ -86,7 +86,19 @@ var conf = {
                     test: /\.(png|jpg|jpeg|gif)$/,
                     // 小于 8k 的图片将以 base64 的方式嵌入在 css 中
                     loader: 'url?limit=8192&name=[path][name].[ext]'
-                }
+                },
+                {
+    				test: /\.woff(2)\??.*$/,
+    				loader: "url-loader?limit=1&mimetype=application/font-woff"
+    			},
+                {
+    				test: /\.(ttf|eot|svg)\??.*$/,
+    				loader: "file-loader"
+    			},
+                {
+    				test: /\.(ogg|mp3)$/,
+    				loader: "file-loader"
+    			}
             ]
         }
     }
