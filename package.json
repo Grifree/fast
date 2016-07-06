@@ -15,7 +15,6 @@
     "exec": "^0.2.1",
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
-    "fis-inline-style-loader": "^0.2.0",
     "fis-parser-inlinecss": "0.0.3",
     "fis-parser-less-2.x": "^0.1.4",
     "fis-parser-webpack": "0.0.5",

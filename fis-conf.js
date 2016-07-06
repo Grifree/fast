@@ -1,4 +1,5 @@
 var conf = {
+    // 入口文件
     webpackEntry: [
         '/m/app/r.js',
         '/m/icon/r.js',
@@ -9,12 +10,14 @@ var conf = {
         '/view/demo/index.js',
         '/view/index/index.js'
     ],
+    // require 被替换的全局变量
     webpackExternals: {
         // var $ = require('jquery') 等于 var $ = window.jQuery
         'jquery': 'jQuery',
         'react': 'React',
         'react-dom': 'ReactDOM'
     },
+    // markdown 可运行代码的配置模板
     markrun: {
         lang: {
             js: function (source) {
@@ -49,15 +52,11 @@ var conf = {
 </body>
 </html>`
     },
+    // webpack 的配置
     webpack: {
         devtool: 'source-map',
+        externals: '不要在这里配置全局变量替换 require 通过 webpackExternals 配置,'.
         module: {
-            preLoaders: [
-                {
-                   test: /\.js$/,
-                   loaders: ['fis-inline-style']
-                }
-            ],
             postLoaders: [
                 // 如果不需要兼容IE8请去掉 es3ify
                 {
@@ -81,33 +80,15 @@ var conf = {
                 {
                     test: /\.less$/,
                     loader: "style!css!less"
-                },
-                {
-                    test: /\.(png|jpg|jpeg|gif)$/,
-                    // 小于 8k 的图片将以 base64 的方式嵌入在 css 中
-                    loader: 'url?limit=8192&name=[path][name].[ext]'
-                },
-                {
-    				test: /\.woff(2)\??.*$/,
-    				loader: "url-loader?limit=1&mimetype=application/font-woff"
-    			},
-                {
-    				test: /\.(ttf|eot|svg)\??.*$/,
-    				loader: "file-loader"
-    			},
-                {
-    				test: /\.(ogg|mp3)$/,
-    				loader: "file-loader"
-    			}
+                }
             ]
         }
     }
 }
 
 
-var markrun = require('markrun')
-var LessPluginFunctions = require('less-plugin-functions')
 
+var LessPluginFunctions = require('less-plugin-functions')
 fis.match('*.less', {
     rExt: '.css',
     parser: fis.plugin('less-2.x', {
@@ -117,6 +98,7 @@ fis.match('*.less', {
     })
 })
 
+var markrun = require('markrun')
 fis.match('*.md', {
     rExt: '.html',
     parser: function (content) {
@@ -125,6 +107,7 @@ fis.match('*.md', {
         return html
     }
 })
+
 conf.webpack.externals = conf.webpackExternals
 fis.match('{' + conf.webpackEntry.join(',') + '}', {
     parser: [
