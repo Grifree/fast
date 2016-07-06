@@ -1,7 +1,8 @@
 {
   "scripts": {
     "woke": "fis3 release -wL -d ./output",
-    "mobe": "nodemon -w mobe.js mobe.js"
+    "mobe": "nodemon -w mobe.js mobe.js",
+    "push": "fis3 release qa -d ./output"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",

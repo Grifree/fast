@@ -5,7 +5,6 @@ var conf = {
         '/m/icon/r.js',
         '/m/load/r.js',
 
-        '/base/library.js',
         '/view/common/common.js',
         '/view/demo/index.js',
         '/view/index/index.js'
@@ -55,7 +54,7 @@ var conf = {
     // webpack 的配置
     webpack: {
         devtool: 'source-map',
-        externals: '不要在这里配置全局变量替换 require 通过 webpackExternals 配置,'.
+        externals: '不要在这里配置全局变量替换 require 通过 webpackExternals 配置,',
         module: {
             postLoaders: [
                 // 如果不需要兼容IE8请去掉 es3ify
@@ -111,12 +110,32 @@ fis.match('*.md', {
 conf.webpack.externals = conf.webpackExternals
 fis.match('{' + conf.webpackEntry.join(',') + '}', {
     parser: [
-        fis.plugin('webpack', conf.webpack)
-    ]
-})
-
-fis.match('*.js', {
-    parser: [
+        fis.plugin('webpack', conf.webpack),
         fis.plugin('inlinecss')
     ]
 })
+
+
+
+fis.match('{package.json,mobe.js,fis-conf.js}', {
+    release: false
+})
+
+fis.media('qa').match('*.js', {
+  optimizer: fis.plugin('uglify-js')
+});
+
+fis.media('qa').match('*.css', {
+  optimizer: fis.plugin('clean-css')
+});
+
+fis.media('qa').match('*.png', {
+  optimizer: fis.plugin('png-compressor')
+});
+// 发布时非 html 资源都进行 hash 处理
+fis.media('qa').match('*', {
+  useHash: true
+});
+fis.media('qa').match('*.html', {
+  useHash: false
+});

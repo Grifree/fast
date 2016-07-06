@@ -31,6 +31,9 @@ npm run mobe
 ```
 http://127.0.0.1:2000/view/demo/index.html
 
+### 压缩
+
+最终发布时候使用 `npm run push` 命令压缩资源和对资源进行 hash 处理
 
 ## 目录说明
 
