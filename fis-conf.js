@@ -131,3 +131,9 @@ fis.match('{' + conf.webpackEntry.join(',') + '}', {
         fis.plugin('webpack', conf.webpack)
     ]
 })
+
+fis.match('*.js', {
+    parser: [
+        fis.plugin('inlinecss')
+    ]
+})
