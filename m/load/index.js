@@ -1,5 +1,5 @@
 var $ = require('jquery')
-__css("./index.less")
+__css("/m/load/index.less")
 var load = {
     _$dom:false,
     step: function () {
