@@ -7,4 +7,4 @@ $(function () {
         $this.closest('.js-tag').remove()
     })
 })
-__css("./index.less")
+__css("/view/demo/index.less")
