@@ -80,9 +80,11 @@ require.js 是为了配合 README.md 引入模块
 
 > 因为构建工具使用的是 fis ，为了支持文件 hash 。非第三方库的样式均使用 `__css("path")` 引入
 
+**注意：__css(path) 中的 path 必须使用绝对路径**
+
 ```js
 // index.js
-__css('./index.less')
+__css('/index.less')
 ```
 
 最终会被编译成
