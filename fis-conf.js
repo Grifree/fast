@@ -11,10 +11,10 @@ var conf = {
     ],
     // require 被替换的全局变量
     webpackExternals: {
-        // var $ = require('jquery') 等于 var $ = window.jQuery
-        'jquery': 'jQuery',
-        'react': 'React',
-        'react-dom': 'ReactDOM'
+        // var $ = require('jquery') 等于 var $ = window.__WOKE_EXTERNALS_.jQuery
+        'jquery': '__WOKE_EXTERNALS_.jQuery',
+        'react': '__WOKE_EXTERNALS_.React',
+        'react-dom': '__WOKE_EXTERNALS_.ReactDOM'
     },
     // markdown 可运行代码的配置模板
     markrun: {
@@ -45,12 +45,12 @@ var conf = {
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <!--<script src="/base/vendor/rem_layout/rem.js"></script>-->
 <link rel="stylesheet" href="/base/normalize.less">
-<link rel="stylesheet" href="/view/common/common.less">
+<link rel="stylesheet" href="/view/common/pc.less">
 <title> <%- title %></title>
 </head>
 <body>
-<script src="/base/library.js"></script>
-<script src="/view/common/common.pack.js"></script>
+<script src="/base/webpack-externals.js"></script>
+<script src="/view/common/pc.js"></script>
 <%- content %>
 </body>
 </html>`
@@ -96,7 +96,7 @@ fis.match('*.less', {
     rExt: '.css',
     parser: fis.plugin('less-2.x', {
         plugins: [
-            new LessPluginFunctions()
+            // new LessPluginFunctions()
         ]
     })
 })
