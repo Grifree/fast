@@ -24,6 +24,10 @@ var conf = {
                     presets: [
                          require('babel-preset-es2015'),
                          require('babel-preset-react')
+                    ],
+                    plugins: [
+                        "babel-plugin-transform-decorators-legacy",
+                        "babel-plugin-transform-class-properties"
                     ]
                 })
                 return {
