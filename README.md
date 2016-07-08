@@ -51,6 +51,22 @@ http://127.0.0.1:2000/view/demo/index.html
 
 每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `fis-conf.js` `webpackEntry` 中添加入口
 
+### 不要直接使用全局变量
+
+绝对不要不经过 `require` 就使用全局变量，例如：
+
+```js
+// Fuck you!
+$('#demo').hide()
+```
+```js
+// Nice
+var $ = require('jquery')
+$('#demo').hide()
+```
+> 不能直接使用全局变量是让你强制性模块化开发，否则 base/library.js 会越来越大。
+
+
 ### m/[name]/require.js
 
 require.js 是为了配合 README.md 引入模块
