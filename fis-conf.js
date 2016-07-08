@@ -96,7 +96,7 @@ fis.match('*.less', {
     rExt: '.css',
     parser: fis.plugin('less-2.x', {
         plugins: [
-            // new LessPluginFunctions()
+            new LessPluginFunctions()
         ]
     })
 })
