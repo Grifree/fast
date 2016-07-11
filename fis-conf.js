@@ -49,7 +49,7 @@ var conf = {
 <title> <%- title %></title>
 </head>
 <body>
-<script src="/base/webpack-externals.js"></script>
+<script src="/base/externals-pc.js"></script>
 <script src="/view/common/pc.js"></script>
 <%- content %>
 </body>
