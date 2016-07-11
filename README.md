@@ -13,14 +13,30 @@ git clone https://github.com/nimojs/woke/archive/master.zip
 cd woke
 ```
 
+### 使用 npm3 + cnpm 安装会更快
+
+```shell
+sudo npm i npm3 -g
+# Windows 不需要加 sudo
+```
+
+```shell
+alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
+```
+
+所有 `install` 操作使用 `cnpm` 代替 `npm`
+
 ```shell
 # fis3 webpack nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
-sudo npm i fis3 -g
-sudo npm i webpack -g
-sudo npm i nodemon -g
+sudo cnpm i fis3 -g
+sudo cnpm i webpack -g
+sudo cnpm i nodemon -g
 
 # 安装非全局依赖
-npm i
+cnpm update
 ```
 
 ## 启动
@@ -67,9 +83,9 @@ $('#demo').hide()
 > 不能直接使用全局变量是让你强制性模块化开发，否则 base/library.js 会越来越大。
 
 
-### m/[name]/require.js
+### m/[name]/r.js
 
-require.js 是为了配合 README.md 引入模块
+r.js 是为了配合 README.md 引入模块
 
 ## rem
 
