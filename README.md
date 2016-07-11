@@ -142,3 +142,7 @@ webpack 的 `require('./a.less')` 方式只在使用第三方库样式时使用�
 require('rc-select/assets/index.less')
 const Select = require('rc-select')
 ```
+
+## 页面公用HTML
+
+[demo-head1-head2-foot1-foot2.html](/view/common/demo-head1-head2-foot1-foot2.html)
