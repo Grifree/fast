@@ -59,15 +59,10 @@ http://127.0.0.1:2000/view/demo/index.html
 - view                  # 页面业务逻辑代码
 - view/commmon          # 业务逻辑公用代码
 - fis-conf.js           # fis3 配置
-- webpack.config.js     # webpack 配置
 - mobe.js               # mobe 配置
 ```
 
-## 入口
-
-每次新建 `view/[name]/index.js` 或者 `m/[name]/require.js` 都需要在 `fis-conf.js` `webpackEntry` 中添加入口
-
-### 不要直接使用全局变量
+## 不要直接使用全局变量
 
 绝对不要不经过 `require` 就使用全局变量，例如：
 

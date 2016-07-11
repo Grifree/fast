@@ -1,14 +1,4 @@
 var conf = {
-    // 入口文件
-    webpackEntry: [
-        '/m/app/r.js',
-        '/m/icon/r.js',
-        '/m/load/r.js',
-
-        '/view/common/common.js',
-        '/view/demo/index.js',
-        '/view/index/index.js'
-    ],
     // require 被替换的全局变量
     webpackExternals: {
         // var $ = require('jquery') 等于 var $ = window.__WOKE_EXTERNALS_.jQuery
@@ -112,7 +102,7 @@ fis.match('*.md', {
 })
 
 conf.webpack.externals = conf.webpackExternals
-fis.match('{' + conf.webpackEntry.join(',') + '}', {
+fis.match('{/view/**/*.js,/m/**/r.js}', {
     parser: [
         fis.plugin('webpack', conf.webpack),
         fis.plugin('inlinecss')
