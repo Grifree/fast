@@ -1,4 +1,4 @@
-# fastflow
+# fast
 
 - [模块索引](./m/README.md)
 
@@ -9,8 +9,8 @@
 
 ```shell
 # git clone 或者浏览器打开zip链接
-git clone https://github.com/fast-flow/fastflow/archive/master.zip
-cd fastflow
+git clone https://github.com/fast-flow/fast/archive/master.zip
+cd fast
 ```
 
 ### 使用 npm3 + cnpm 安装会更快
