@@ -42,7 +42,7 @@ cnpm update
 ## 启动
 
 ```shell
-npm run woke
+npm run dev
 npm run mobe
 ```
 http://127.0.0.1:2000/view/demo/index.html

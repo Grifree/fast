@@ -48,7 +48,15 @@ var conf = {
     webpack: {
         devtool: 'source-map',
         externals: '不要在这里配置全局变量替换 require 通过 webpackExternals 配置,',
+        resolve: {
+            alias: {
+                // 通过别名给 moment 打包提速
+                moment: "moment/min/moment-with-locales.min.js"
+            }
+        }
         module: {
+            // 通过 noParse 给 moment 打包提速
+            noParse: [/moment-with-locales/],
             postLoaders: [
                 // 如果不需要兼容IE8请去掉 es3ify
                 {
