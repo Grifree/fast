@@ -1,4 +1,4 @@
-# woke
+# fastflow
 
 - [模块索引](./m/README.md)
 
@@ -9,8 +9,8 @@
 
 ```shell
 # git clone 或者浏览器打开zip链接
-git clone https://github.com/nimojs/woke/archive/master.zip
-cd woke
+git clone https://github.com/fast-flow/fastflow/archive/master.zip
+cd fastflow
 ```
 
 ### 使用 npm3 + cnpm 安装会更快

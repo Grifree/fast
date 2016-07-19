@@ -19,7 +19,7 @@
     "file-loader": "^0.8.5",
     "fis-parser-inlinecss": "0.0.6",
     "fis-parser-less-2.x": "^0.1.4",
-    "fis-parser-webpack": "0.0.5",
+    "fis3-parser-webpack": "0.0.5",
     "fms": "^0.0.32",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
