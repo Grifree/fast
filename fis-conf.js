@@ -122,6 +122,10 @@ fis.match('{package.json,mobe.js,fis-conf.js,/node_modules/**}', {
     release: false
 })
 
+fis.media('qa').match('**/README.html', {
+  release: false
+});
+
 fis.media('qa').match('*.js', {
   optimizer: fis.plugin('uglify-js')
 });
