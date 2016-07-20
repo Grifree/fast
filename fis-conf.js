@@ -53,10 +53,10 @@ var conf = {
                 // 通过别名给 moment 打包提速
                 moment: "moment/min/moment-with-locales.min.js"
             }
-        }
+        },
         module: {
             // 通过 noParse 给 moment 打包提速
-            noParse: [/moment-with-locales/],
+            noParse: ['moment/min/moment-with-locales.min.js'],
             postLoaders: [
                 // 如果不需要兼容IE8请去掉 es3ify
                 {
@@ -118,7 +118,7 @@ fis.match('{/view/**/*.js,/m/**/r.js}', {
 
 
 
-fis.match('{package.json,mobe.js,fis-conf.js}', {
+fis.match('{package.json,mobe.js,fis-conf.js,/node_modules/**}', {
     release: false
 })
 
