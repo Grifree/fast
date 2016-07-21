@@ -140,4 +140,4 @@ const Select = require('rc-select')
 
 ## 页面公用HTML
 
-[demo-head1-head2-foot1-foot2.html](/view/common/demo-head1-head2-foot1-foot2.html)
+[demo-head1-head2-foot1-foot2.html](/view/common/pc/demo-head1-head2-foot1-foot2.html)

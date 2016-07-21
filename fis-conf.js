@@ -38,12 +38,12 @@ var conf = {
 <meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <!--<script src="/base/rem.js"></script>-->
-<link rel="stylesheet" href="/view/common/pc.less">
+<link rel="stylesheet" href="/view/common/pc/index.less">
 <title> <%- title %></title>
 </head>
 <body>
 <script src="/base/externals-pc.js"></script>
-<script src="/view/common/pc.js"></script>
+<script src="/view/common/pc/index.js"></script>
 <%- content %>
 </body>
 </html>`
