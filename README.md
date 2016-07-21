@@ -84,9 +84,9 @@ r.js 是为了配合 README.md 引入模块
 
 ## rem
 
-如果你要使用 rem 方案请确保 `commmon/head1.html` 中的 `<head>` 部分引入了 `/base/vendor/rem_layout/rem.js`
+如果你要使用 rem 方案请确保 `commmon/` 中公用头部的 `<head>` 部分引入了 `/base/rem.js`
 
-`/base/_rem.less` 中默认设置了设计稿 640，可根据实际情况调整这个值。
+`/base/func.less` 中默认设置了设计稿 640，可根据实际情况调整这个值。
 
 ### 使用计算方法
 
