@@ -12,12 +12,16 @@ var conf = {
             js: function (source) {
                 var result = require('babel-core').transform(source, {
                     presets: [
-                         require('babel-preset-es2015'),
-                         require('babel-preset-react')
+                         "es2015"
                     ],
                     plugins: [
-                        "babel-plugin-transform-decorators-legacy",
-                        "babel-plugin-transform-class-properties"
+                       ["transform-react-jsx", {pragma: 'require("react").createElement'}],
+                       "transform-flow-strip-types",
+                       "syntax-flow",
+                       "syntax-jsx",
+                       "transform-react-display-name",
+                       "transform-decorators-legacy",
+                       "transform-class-properties"
                     ]
                 })
                 return {
@@ -48,15 +52,7 @@ var conf = {
     webpack: {
         devtool: 'source-map',
         externals: '不要在这里配置全局变量替换 require 通过 webpackExternals 配置,',
-        resolve: {
-            alias: {
-                // 通过别名给 moment 打包提速
-                moment: "moment/min/moment-with-locales.min.js"
-            }
-        },
         module: {
-            // 通过 noParse 给 moment 打包提速
-            noParse: ['moment/min/moment-with-locales.min.js'],
             postLoaders: [
                 // 如果不需要兼容IE8请去掉 es3ify
                 {
@@ -69,8 +65,18 @@ var conf = {
                     test: /\.js$/,
                     loader: 'babel-loader',
                     query: {
-                        presets: ['es2015', 'react'],
-                        plugins: ["transform-decorators-legacy","transform-class-properties"]
+                        presets: [
+                             "es2015"
+                        ],
+                        plugins: [
+                           ["transform-react-jsx", {pragma: 'require("react").createElement'}],
+                           "transform-flow-strip-types",
+                           "syntax-flow",
+                           "syntax-jsx",
+                           "transform-react-display-name",
+                           "transform-decorators-legacy",
+                           "transform-class-properties"
+                        ]
                     }
                 },
                 {
