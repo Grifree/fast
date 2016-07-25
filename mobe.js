@@ -17,7 +17,7 @@ var app = require('fms')
 app.run({
     static: './output',
     port: '2000',
-    read: ['/view/demo/'],
+    read: ['/view/pc/demo/'],
     view: {
         server: 'http://127.0.0.1:2009',
         templateDir: './output/view/'
@@ -28,5 +28,5 @@ app.run({
 app.view({
     title: '演示',
     url: '/demo/',
-    template: 'demo/index.html'
+    template: 'pc/demo/index.html'
 })

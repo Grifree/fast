@@ -1,10 +1,10 @@
 var conf = {
     // require 被替换的全局变量
     webpackExternals: {
-        // var $ = require('jquery') 等于 var $ = window.__WOKE_EXTERNALS_.jQuery
-        'jquery': '__WOKE_EXTERNALS_.jQuery',
-        'react': '__WOKE_EXTERNALS_.React',
-        'react-dom': '__WOKE_EXTERNALS_.ReactDOM'
+        // var $ = require('jquery') 等于 var $ = window.__FAST_EXTERNALS_.jQuery
+        'jquery': '__FAST_EXTERNALS_.jQuery',
+        'react': '__FAST_EXTERNALS_.React',
+        'react-dom': '__FAST_EXTERNALS_.ReactDOM'
     },
     // markdown 可运行代码的配置模板
     markrun: {
@@ -38,12 +38,11 @@ var conf = {
 <meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <!--<script src="/base/rem.js"></script>-->
-<link rel="stylesheet" href="/view/common/pc/index.less">
+<link rel="stylesheet" href="/view/pc/common/index.less">
 <title> <%- title %></title>
 </head>
 <body>
 <script src="/base/externals-pc.js"></script>
-<script src="/view/common/pc/index.js"></script>
 <%- content %>
 </body>
 </html>`
