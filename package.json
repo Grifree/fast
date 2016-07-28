@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "fis3 release -wL -d ./output",
     "mobe": "nodemon -w mobe.js mobe.js",
-    "push": "fis3 release qa -d ./output"
+    "push": "fis3 release qa -d ./output",
+    "update": "npm update --registry=https://registry.npm.taobao.org"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",

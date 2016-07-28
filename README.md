@@ -5,7 +5,7 @@
 > The front-end integration solutions
 > 前端集成解决方案
 
-## 下载与安装
+## 下载
 
 ```shell
 # git clone 或者浏览器打开zip链接
@@ -13,30 +13,16 @@ git clone https://github.com/fast-flow/fast/archive/master.zip
 cd fast
 ```
 
-### 使用 npm3 + cnpm 安装会更快
+## 安装依赖
 
+#### 安装全局包
 ```shell
-sudo npm i npm3 -g
-# Windows 不需要加 sudo
-```
-
-```shell
-alias cnpm="npm3 --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc"
-```
-
-所有 `install` 操作使用 `cnpm` 代替 `npm`
-
-```shell
-# fis3 webpack nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
+# fis3  nodemon 安装速度较慢，请耐心等待（但只需要在全局安装一次）
 sudo cnpm i fis3 -g
-sudo cnpm i webpack -g
 sudo cnpm i nodemon -g
 
-# 安装非全局依赖
-cnpm i
+# 更新所需依赖
+npm run update
 ```
 
 ## 启动
