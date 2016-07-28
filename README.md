@@ -36,7 +36,7 @@ sudo cnpm i webpack -g
 sudo cnpm i nodemon -g
 
 # 安装非全局依赖
-cnpm update
+cnpm i
 ```
 
 ## 启动
@@ -139,4 +139,4 @@ const Select = require('rc-select')
 
 ## 页面公用HTML
 
-[demo-head1-head2-foot1-foot2.html](/view/common/pc/demo-head1-head2-foot1-foot2.html)
+[demo-head1-head2-foot1-foot2.html](/view/pc/common/demo-head1-head2-foot1-foot2.html)
