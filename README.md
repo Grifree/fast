@@ -22,7 +22,7 @@ sudo cnpm i fis3 -g
 sudo cnpm i nodemon -g
 
 # 更新所需依赖
-npm run update
+npm run i
 ```
 
 ## 启动
